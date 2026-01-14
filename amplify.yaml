@@ -1,13 +1,20 @@
 version: 1
 frontend:
   phases:
+    preBuild:
+      commands:
+        - npm ci
     build:
       commands:
-        # No npm build required for Zero-Bundler architecture
-        - echo "Skipping build phase..."
+        - npm run build
   artifacts:
-    baseDirectory: /
+    baseDirectory: dist
     files:
       - '**/*'
   cache:
-    paths: []
+    paths:
+      - node_modules/**/*
+  customRules:
+    - source: </^[^.]+$|\/(.*)/>
+      target: /index.html
+      status: 200
