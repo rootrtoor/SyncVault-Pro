@@ -1,0 +1,9 @@
+
+{
+  "name": "SyncVault Pro",
+  "description": "A high-performance Dropbox-inspired sync application with advanced file categorization (Photos, Videos, Docs), automated SMS backup/restore capabilities, and deep customization for background synchronization.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
